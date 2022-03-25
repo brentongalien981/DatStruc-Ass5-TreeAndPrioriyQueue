@@ -121,8 +121,6 @@ public class MyLinkedBinaryTree<E> extends LinkedBinaryTree<E> {
 	public Position<E> genericOrderNext(Position<E> p, Iterator<Position<E>> posIterator) {
 
 		Node<E> referenceNode = validate(p);
-
-		Node<E> nextNode = null;
 		Node<E> walkNode;
 
 		while (posIterator.hasNext()) {
@@ -131,8 +129,7 @@ public class MyLinkedBinaryTree<E> extends LinkedBinaryTree<E> {
 				walkNode = (Node<E>) posIterator.next();
 
 				if (walkNode == referenceNode) {
-					nextNode = (Node<E>) posIterator.next();
-					break;
+					return (Node<E>) posIterator.next();
 				}
 			} catch (Exception e) {
 				System.out.println("\nOops! Caught exception ==> " + e.getMessage());
@@ -141,7 +138,7 @@ public class MyLinkedBinaryTree<E> extends LinkedBinaryTree<E> {
 
 		}
 
-		return nextNode;
+		return null;
 	}
 
 	
