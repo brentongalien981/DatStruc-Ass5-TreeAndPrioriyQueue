@@ -125,7 +125,7 @@ public class MyLinkedBinaryTree<E> extends LinkedBinaryTree<E> {
 		Node<E> nextNode = null;
 		Node<E> walkNode;
 
-		while (true) {
+		while (posIterator.hasNext()) {
 
 			try {
 				walkNode = (Node<E>) posIterator.next();
