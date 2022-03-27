@@ -5,26 +5,10 @@ import coursepackage2.*;
 
 
 public class MyHeapPriorityQueue<K, V> extends HeapPriorityQueue<K, V> {
-
-	@Override
-	protected void upheap(int childIndex) {
-
-		System.out.println("Calling METHOD: upheap() from CLASS: MyHeapPriorityQueue...");
-
-		int parentIndex = parent(childIndex);
-
-		if (compare(heap.get(childIndex), heap.get(parentIndex)) < 0) {
-
-			swap(childIndex, parentIndex);
-			childIndex = parentIndex;
-			upheap(childIndex);
-
-		}
-
-	}
 	
 	
 
+	// 300726788 - Bren Baga
 	public static void main(String[] args) {
 		
 		System.out.println("Exercise 3 - Modifying uphead() method with recursion.");
@@ -80,6 +64,25 @@ public class MyHeapPriorityQueue<K, V> extends HeapPriorityQueue<K, V> {
 
 		for (int i = 0; i < myHpq.size(); i++) {
 			System.out.println("(" + myHpq.get(i).getKey() + ", " + myHpq.get(i).getValue() + ")");
+		}
+
+	}
+	
+	
+	
+	@Override
+	protected void upheap(int childIndex) {
+
+		System.out.println("Calling METHOD: upheap() from CLASS: MyHeapPriorityQueue...");
+
+		int parentIndex = parent(childIndex);
+
+		if (compare(heap.get(childIndex), heap.get(parentIndex)) < 0) {
+
+			swap(childIndex, parentIndex);
+			childIndex = parentIndex;
+			upheap(childIndex);
+
 		}
 
 	}
