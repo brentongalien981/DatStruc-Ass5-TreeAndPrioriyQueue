@@ -49,6 +49,9 @@ public class HeapPriorityQueue<K, V> extends AbstractPriorityQueue<K, V> {
 	}
 
 	protected void upheap(int j) {
+		
+		System.out.println("Calling METHOD: upheap() from CLASS: HeapPriorityQueue...");
+		
 		while (j > 0) { // continue until reaching root (or break statement)
 			int p = parent(j);
 			if (compare(heap.get(j), heap.get(p)) >= 0)
@@ -122,6 +125,12 @@ public class HeapPriorityQueue<K, V> extends AbstractPriorityQueue<K, V> {
 				System.out.println("Invalid right child relationship");
 		}
 	}
+	
+	
+	public Entry<K, V> get(int i) {
+		return heap.get(i);
+	}
+	
 
 	public static void main(String[] args) {
 
