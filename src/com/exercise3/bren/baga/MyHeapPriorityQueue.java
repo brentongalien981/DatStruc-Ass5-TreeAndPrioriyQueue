@@ -1,9 +1,8 @@
 package com.exercise3.bren.baga;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-
 import coursepackage2.*;
+
+
 
 public class MyHeapPriorityQueue<K, V> extends HeapPriorityQueue<K, V> {
 
@@ -23,6 +22,8 @@ public class MyHeapPriorityQueue<K, V> extends HeapPriorityQueue<K, V> {
 		}
 
 	}
+	
+	
 
 	public static void main(String[] args) {
 		
